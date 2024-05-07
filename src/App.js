@@ -139,14 +139,15 @@ function App() {
 export default App;
 
 const Game = styled.div`
-margin: 5px 15%;
+margin: 5px 7vw;
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: space-between;
 border: 1px solid black;
 background-color: white;
-height: 65vh;
+min-height: 60vh;
+
 h2 {
   margin: 1% 0;
   font-size: 22px;

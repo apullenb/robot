@@ -30,6 +30,7 @@ display: flex;
 gap: 12px;
 margin: 2px 0;
 padding: 6px;
+flex-wrap:wrap;
 
 & div {
     border: 1px solid black;
@@ -44,7 +45,7 @@ p {
 }
 
 button {
-    padding: 3px 8px;
+    padding: 3px 7px;
     background-color: #e0a884;
     margin: 1px 10px 1px 0;
     border: 1px solid gray;
