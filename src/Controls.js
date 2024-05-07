@@ -7,18 +7,18 @@ function Controls({ move, rotate, report }) {
         <div>
             <h3>Position Robot</h3>
             <p>Use the buttons below or the left and right arrow keys</p>
-          <button onClick={() => rotate('LEFT')}>Rotate Left</button>
-          <button onClick={() => rotate('RIGHT')}>Rotate Right</button>
+          <button data-testid='left-btn' onClick={() => rotate('LEFT')}>rotate Left</button>
+          <button data-testid='right-btn' onClick={() => rotate('RIGHT')}>rotate Right</button>
         </div>
         <div>
             <h3>Move the Robot</h3>
             <p>Use the button below or the Enter key</p>
-          <button onClick={move}>Move Forward</button>
+          <button data-testid='move-btn' onClick={move}>move forward</button>
         </div>
         <div>
             <h3>Report Position</h3>
             <p>Use the R key or the button below</p>
-          <button onClick={report}>Report Position</button>
+          <button data-testid='report-btn' onClick={report}>report position</button>
         </div>
       </ControlRow>
     );

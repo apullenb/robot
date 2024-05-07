@@ -22,6 +22,7 @@ function Table({ x, y, facing, handlePlace }) {
         key={`${row}-${column}`}
         className="cell"
         id={`${row}-${column}`}
+        data-testid={`${row}-${column}`}
         onClick={() => handlePlace(column, gridSize - row - 1)}
       >
         {isRobotAtCell(row, column) && (

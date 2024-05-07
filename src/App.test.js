@@ -2,10 +2,11 @@ import { render, screen, fireEvent } from '@testing-library/react';
 import App from './App';
 import Controls from './Controls';
 import Table from './Table';
+import '@testing-library/jest-dom';
 
 
 function placeRobot() {
-  fireEvent.click(screen.getById('4-0')); 
+  fireEvent.click(screen.getByTestId('4-0')); 
 }
 
 function reportPosition() {
@@ -64,15 +65,15 @@ test('renders Controls component', () => {
 
   render(<Controls move={move} rotate={rotate} report={report} />);
 
-  const rotateLeftButton = screen.getByText(/Rotate Left/i);
-  const rotateRightButton = screen.getByText(/Rotate Right/i);
-  const moveButton = screen.getByText(/Move Forward/i);
-  const reportButton = screen.getByText(/Report Position/i);
+  const rotateLeftButton = screen.getByTestId('left-btn');
+  const rotateRightButton = screen.getByTestId('right-btn');
+  const moveButton = screen.getByTestId('move-btn');
+  const reportButton = screen.getByTestId('report-btn');
 
   expect(rotateLeftButton).toBeInTheDocument();
   expect(rotateRightButton).toBeInTheDocument();
   expect(moveButton).toBeInTheDocument();
-  expect(reportButton).ToBeInTheDocument();
+  expect(reportButton).toBeInTheDocument();
 });
 
 test('invokes appropriate functions on button clicks in Controls', () => {
@@ -82,17 +83,17 @@ test('invokes appropriate functions on button clicks in Controls', () => {
 
   render(<Controls move={move} rotate={rotate} report={report} />);
 
-  fireEvent.click(screen.getByText(/Rotate Left/i));
+  fireEvent.click(screen.getByTestId('left-btn'));
   expect(rotate).toHaveBeenCalledWith('LEFT');
 
-  fireEvent.click(screen.getByText(/Rotate Right/i));
-  expect(rotate).ToHaveBeenCalledWith('RIGHT');
+  fireEvent.click(screen.getByTestId('right-btn'));
+  expect(rotate).toHaveBeenCalledWith('RIGHT');
 
-  fireEvent.click(screen.getByText(/Move Forward/i));
+  fireEvent.click(screen.getByTestId('move-btn'));
   expect(move).toHaveBeenCalled();
 
-  fireEvent.click(screen.getByText(/Report Position/i));
-  expect(report).ToHaveBeenCalled();
+  fireEvent.click(screen.getByTestId('report-btn'));
+  expect(report).toHaveBeenCalled();
 });
 
 
@@ -102,7 +103,7 @@ test('renders Table component', () => {
 
   for (let row = 0; row < 5; row++) {
     for (let col = 0; col < 5; col++) {
-      const cell = screen.getById(`${row}-${col}`);
+      const cell = screen.getByTestId(`${row}-${col}`);
       expect(cell).toBeInTheDocument();
     }
   }
@@ -111,7 +112,7 @@ test('renders Table component', () => {
 test('clicking on Table cell calls handlePlace', () => {
   const handlePlace = jest.fn();
   render(<Table x={0} y={0} facing="NORTH" handlePlace={handlePlace} />);
-  const cell = screen.getById('4-0');
+  const cell = screen.getByTestId('4-0');
   fireEvent.click(cell);
-  expect(handlePlace).ToHaveBeenCalledWith(0, 0);
+  expect(handlePlace).toHaveBeenCalledWith(0, 0);
 });
