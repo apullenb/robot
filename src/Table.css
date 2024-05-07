@@ -1,3 +1,12 @@
+body {
+    background-color: #4a2a0d;
+}
+
+h1 {
+    text-align: center;
+    margin: 1px;
+    color: white;
+}
 
 .tabletop {
     display: inline-block;
@@ -6,7 +15,6 @@
     background-color: #976319;
     padding: 10px;
     border-radius: 10px;
-    margin-top: 20px;
 }
 
 .row {
@@ -14,20 +22,22 @@
 }
 
 .cell {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     position: relative;
     background: linear-gradient(to bottom right, #efb461, #d49f53);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
     transition: transform 0.1s;
 }
 
 .cell:hover {
-    transform: scale(1.02);
+    transform: scale(1.01);
+    background: linear-gradient(to bottom right, #e0a757, #ba8844);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
 .robot {
@@ -37,8 +47,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(to bottom right, #e0a755, #ba8844);
 }
 
 .robot-icon {
