@@ -37,7 +37,7 @@ padding: 6px;
 
  h3 {
     font-size: 18px;
-    margin: 2px 0;
+    margin: 3% 0;
 }
 p {
     margin: 2px 0;
