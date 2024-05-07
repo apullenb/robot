@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/toy-robot/static/css/main.20f9841f.css",
+    "main.js": "/toy-robot/static/js/main.c502055c.js",
+    "index.html": "/toy-robot/index.html",
+    "main.20f9841f.css.map": "/toy-robot/static/css/main.20f9841f.css.map",
+    "main.c502055c.js.map": "/toy-robot/static/js/main.c502055c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.20f9841f.css",
+    "static/js/main.c502055c.js"
+  ]
+}
