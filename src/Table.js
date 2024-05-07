@@ -1,11 +1,14 @@
 import React from 'react';
 import './Table.css';
-
+import back from './assets/robot-back.PNG'
+import right from './assets/robot-right.PNG'
+import left from './assets/robot-left.PNG'
+import front from './assets/robot-front.PNG'
 const images = {
-  north: '/robot-back.PNG',
-  south: '/robot-front.PNG',
-  east: '/robot-right.PNG',
-  west: '/robot-left.PNG',
+  north: back,
+  south: front,
+  east: right,
+  west: left,
 };
 
 function Table({ x, y, facing, handlePlace }) {
